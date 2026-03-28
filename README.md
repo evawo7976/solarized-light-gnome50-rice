@@ -8,10 +8,6 @@ A comprehensive Solarized Light theme for Fedora Rawhide 45+ with GNOME 50. Them
 |---------|----------|
 | ![Desktop](screenshots/desktop.png) | ![Terminal](screenshots/terminal.png) |
 
-| Login Screen | Boot (Plymouth) |
-|-------------|-----------------|
-| ![Login](screenshots/login.png) | ![Plymouth](screenshots/plymouth.png) |
-
 | VS Code | Neovim |
 |---------|--------|
 | ![VS Code](screenshots/vscode.png) | ![Neovim](screenshots/neovim.png) |
@@ -19,6 +15,10 @@ A comprehensive Solarized Light theme for Fedora Rawhide 45+ with GNOME 50. Them
 | btop | lazygit |
 |------|---------|
 | ![btop](screenshots/btop.png) | ![lazygit](screenshots/lazygit.png) |
+
+| Plymouth Boot |
+|---------------|
+| ![Plymouth](screenshots/plymouth.png) |
 
 ## What's Themed
 
