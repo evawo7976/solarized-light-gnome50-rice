@@ -2,6 +2,24 @@
 
 A comprehensive Solarized Light theme for Fedora Rawhide 45+ with GNOME 50. Themes every visible surface from boot to desktop.
 
+## Screenshots
+
+| Desktop | Terminal |
+|---------|----------|
+| ![Desktop](screenshots/desktop.png) | ![Terminal](screenshots/terminal.png) |
+
+| Login Screen | Boot (Plymouth) |
+|-------------|-----------------|
+| ![Login](screenshots/login.png) | ![Plymouth](screenshots/plymouth.png) |
+
+| VS Code | Neovim |
+|---------|--------|
+| ![VS Code](screenshots/vscode.png) | ![Neovim](screenshots/neovim.png) |
+
+| btop | lazygit |
+|------|---------|
+| ![btop](screenshots/btop.png) | ![lazygit](screenshots/lazygit.png) |
+
 ## What's Themed
 
 | Surface | Details |
