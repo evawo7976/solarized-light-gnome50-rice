@@ -48,7 +48,8 @@ sudo dnf install -y \
   plymouth-theme-solar plymouth-plugin-script \
   neovim fd-find ripgrep \
   zoxide cava figlet cowsay fortune-mod \
-  glow ImageMagick liberation-sans-fonts
+  glow ImageMagick liberation-sans-fonts \
+  glib2-devel
 
 # ── Phase 2: Install Starship ──
 step "Installing starship prompt..."
