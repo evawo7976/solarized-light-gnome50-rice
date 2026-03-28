@@ -1,0 +1,113 @@
+# Solarized Light Starship Configuration
+# Light pastel backgrounds with dark accent text
+
+format = """
+[](fg:#d3e8f0)\
+$os\
+[](fg:#d3e8f0 bg:#d1eae7)\
+$directory\
+[](fg:#d1eae7 bg:#ece0b8)\
+$git_branch\
+$git_status\
+[](fg:#ece0b8 bg:#dfe5b8)\
+$nodejs\
+$rust\
+$java\
+$python\
+$golang\
+[](fg:#dfe5b8 bg:#d5dadc)\
+$docker_context\
+$aws\
+[](fg:#d5dadc)\
+$line_break\
+$character"""
+
+palette = "solarized_light"
+
+[palettes.solarized_light]
+base03 = "#002b36"
+base02 = "#073642"
+base01 = "#586e75"
+base00 = "#657b83"
+base0 = "#839496"
+base1 = "#93a1a1"
+base2 = "#eee8d5"
+base3 = "#fdf6e3"
+yellow = "#b58900"
+orange = "#cb4b16"
+red = "#dc322f"
+magenta = "#d33682"
+violet = "#6c71c4"
+blue = "#268bd2"
+cyan = "#2aa198"
+green = "#859900"
+
+[os]
+disabled = false
+style = "bg:#d3e8f0 fg:#268bd2 bold"
+
+[os.symbols]
+Fedora = " "
+
+[directory]
+style = "bg:#d1eae7 fg:#2aa198 bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = ".../"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+
+[git_branch]
+symbol = " "
+style = "bg:#ece0b8 fg:#b58900 bold"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#ece0b8 fg:#b58900"
+format = "[$all_status$ahead_behind ]($style)"
+
+[nodejs]
+symbol = " "
+style = "bg:#dfe5b8 fg:#859900 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = "🦀"
+style = "bg:#dfe5b8 fg:#859900 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[java]
+symbol = " "
+style = "bg:#dfe5b8 fg:#859900 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[python]
+symbol = " "
+style = "bg:#dfe5b8 fg:#859900 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = " "
+style = "bg:#dfe5b8 fg:#859900 bold"
+format = "[ $symbol ($version) ]($style)"
+
+[docker_context]
+symbol = " "
+style = "bg:#d5dadc fg:#586e75 bold"
+format = "[ $symbol $context ]($style)"
+
+[aws]
+symbol = "  "
+style = "bg:#d5dadc fg:#586e75 bold"
+format = "[ $symbol ($profile )(\\($region\\) )]($style)"
+
+[line_break]
+disabled = false
+
+[character]
+success_symbol = "[❯](bold #2aa198)"
+error_symbol = "[❯](bold #dc322f)"

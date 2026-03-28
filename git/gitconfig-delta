@@ -1,0 +1,48 @@
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    light = true
+    syntax-theme = Solarized (light)
+    side-by-side = true
+    line-numbers = true
+    file-style = #586e75 bold
+    file-decoration-style = #93a1a1 ul
+    hunk-header-style = #657b83
+    hunk-header-decoration-style = #93a1a1 box
+    plus-style = syntax #dfd8c0
+    minus-style = syntax #f0d6d4
+    line-numbers-left-style = #93a1a1
+    line-numbers-right-style = #93a1a1
+    line-numbers-minus-style = #dc322f
+    line-numbers-plus-style = #859900
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
+
+[color "branch"]
+    current = cyan bold
+    local = green
+    remote = blue
+
+[color "diff"]
+    meta = blue bold
+    frag = magenta
+    old = red
+    new = green
+
+[alias]
+    lg = log --graph --pretty=format:'%C(cyan)%h%Creset -%C(yellow)%d%Creset %s %C(blue)(%cr) %C(magenta)<%an>%Creset' --abbrev-commit
+    st = status -sb

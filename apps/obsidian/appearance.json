@@ -1,0 +1,9 @@
+{
+  "baseFontSize": 16,
+  "theme": "obsidian",
+  "accentColor": "#2aa198",
+  "enabledCssSnippets": ["solarized-light"],
+  "interfaceFontFamily": "Adwaita Sans",
+  "textFontFamily": "Adwaita Sans",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font"
+}

@@ -1,0 +1,11 @@
+[org/gnome/desktop/interface]
+color-scheme='prefer-light'
+cursor-theme='Bibata-Modern-Ice'
+icon-theme='Papirus-Light'
+font-name='Adwaita Sans 11'
+monospace-font-name='JetBrainsMono Nerd Font 10'
+
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/backgrounds/solarized-stripes-4k.png'
+picture-options='zoom'
+primary-color='#fdf6e3'

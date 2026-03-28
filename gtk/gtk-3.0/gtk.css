@@ -1,0 +1,40 @@
+/* Solarized Light GTK3 overrides */
+
+headerbar {
+  background-color: #eee8d5;
+  color: #586e75;
+  border-bottom: 1px solid #d3cbbf;
+}
+
+headerbar:backdrop {
+  background-color: #fdf6e3;
+  color: #93a1a1;
+}
+
+window {
+  background-color: #fdf6e3;
+}
+
+*:selected {
+  background-color: #268bd2;
+  color: #fdf6e3;
+}
+
+.sidebar {
+  background-color: #eee8d5;
+  color: #586e75;
+}
+
+*:link {
+  color: #268bd2;
+}
+
+*:visited {
+  color: #6c71c4;
+}
+
+tooltip {
+  background-color: #073642;
+  color: #eee8d5;
+  border-radius: 6px;
+}

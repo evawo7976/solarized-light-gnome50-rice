@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Solarized Light
+Description=Cartoonish retro sunrise with Solarized Light colors and color-cycling spinner
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/solarized-light
+ScriptFile=/usr/share/plymouth/themes/solarized-light/solarized-light.script

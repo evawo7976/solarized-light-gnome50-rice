@@ -1,0 +1,147 @@
+/* Solarized Light GNOME Shell Theme */
+/* Only overrides the panel and key UI elements to match Solarized Light */
+
+/* Import the default Adwaita shell theme as base */
+@import url("resource:///org/gnome/shell/theme/gnome-shell.css");
+
+/* Top panel */
+#panel {
+  background-color: rgba(253, 246, 227, 0.97) !important;
+  color: #586e75 !important;
+  border-bottom: 1px solid #eee8d5 !important;
+}
+
+#panel .panel-button {
+  color: #586e75;
+}
+
+#panel .panel-button:hover {
+  background-color: #eee8d5;
+  color: #073642;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:checked {
+  background-color: #eee8d5;
+  color: #2aa198;
+}
+
+/* Clock in panel */
+#panel .clock-display {
+  color: #586e75;
+}
+
+/* System status area */
+#panel .system-status-icon {
+  color: #586e75;
+}
+
+/* Panel indicators */
+#panel .panel-status-indicators-box .system-status-icon,
+#panel .panel-status-menu-box .system-status-icon {
+  color: #586e75;
+}
+
+/* Quick settings / notification panel */
+#quick-settings,
+.quick-settings {
+  background-color: #fdf6e3;
+  color: #586e75;
+  border: 1px solid #eee8d5;
+}
+
+#quick-settings .icon-button,
+.quick-toggle {
+  background-color: #eee8d5;
+  color: #586e75;
+}
+
+.quick-toggle:checked {
+  background-color: #2aa198;
+  color: #fdf6e3;
+}
+
+/* Calendar / date menu popup */
+.datemenu-calendar-column {
+  background-color: #fdf6e3;
+}
+
+.calendar {
+  background-color: #fdf6e3;
+  color: #586e75;
+}
+
+.calendar-month-label {
+  color: #586e75;
+}
+
+.calendar-day {
+  color: #657b83;
+}
+
+.calendar-today {
+  background-color: #2aa198;
+  color: #fdf6e3;
+}
+
+.calendar-other-month-day {
+  color: #93a1a1;
+}
+
+/* Notifications */
+.message {
+  background-color: #eee8d5;
+  color: #586e75;
+  border: 1px solid #d3cbbf;
+}
+
+.message-title {
+  color: #073642;
+}
+
+.message-body {
+  color: #586e75;
+}
+
+/* Overview / Activities */
+.workspace-background {
+  background-color: #fdf6e3;
+}
+
+/* Search results */
+.search-result-content {
+  color: #586e75;
+}
+
+/* Popup menus */
+.popup-menu {
+  background-color: #fdf6e3;
+  color: #586e75;
+  border: 1px solid #eee8d5;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus {
+  background-color: #eee8d5;
+  color: #073642;
+}
+
+.popup-menu-item:checked {
+  background-color: #2aa198;
+  color: #fdf6e3;
+}
+
+.popup-separator-menu-item .popup-separator-menu-item-separator {
+  background-color: #eee8d5;
+}
+
+/* OSD (volume/brightness overlay) */
+.osd-window {
+  background-color: rgba(253, 246, 227, 0.95);
+  color: #586e75;
+  border: 1px solid #eee8d5;
+}
+
+.level {
+  color: #2aa198;
+}

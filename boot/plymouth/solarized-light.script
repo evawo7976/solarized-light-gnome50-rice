@@ -1,0 +1,128 @@
+# Solarized Light Plymouth Theme
+# Cartoonish retro sunrise with color-cycling spinner
+
+# ── Background ──
+bg = Image("background.png");
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+bg_width = bg.GetWidth();
+bg_height = bg.GetHeight();
+
+# Scale background to fill screen
+scale_x = screen_width / bg_width;
+scale_y = screen_height / bg_height;
+scale = Math.Max(scale_x, scale_y);
+scaled_bg = bg.Scale(bg_width * scale, bg_height * scale);
+
+bg_sprite = Sprite(scaled_bg);
+bg_sprite.SetX(screen_width / 2 - scaled_bg.GetWidth() / 2);
+bg_sprite.SetY(screen_height / 2 - scaled_bg.GetHeight() / 2);
+bg_sprite.SetZ(-100);
+
+# ── Spinner (color-cycling dot) ──
+spinner_frames = [];
+for (i = 0; i < 12; i++) {
+  spinner_frames[i] = Image("spinner-" + String(i, "%02d") + ".png");
+}
+
+NUM_DOTS = 5;
+dot_sprites = [];
+dot_opacities = [];
+
+for (i = 0; i < NUM_DOTS; i++) {
+  dot_sprites[i] = Sprite(spinner_frames[0]);
+  dot_sprites[i].SetZ(100);
+  dot_opacities[i] = 1.0 - (i * 0.18);
+}
+
+frame = 0;
+
+fun refresh_callback() {
+  frame++;
+
+  for (i = 0; i < NUM_DOTS; i++) {
+    # Each dot is offset in the animation cycle
+    dot_frame = (frame - i * 4) % 48;
+    color_index = ((frame - i * 8) / 4) % 12;
+    if (color_index < 0) color_index = color_index + 12;
+
+    # Bouncing horizontal motion
+    t = dot_frame / 48.0;
+    x_offset = Math.Sin(t * 2 * 3.14159) * 60;
+
+    dot_sprites[i].SetImage(spinner_frames[Math.Int(color_index)]);
+    dot_sprites[i].SetX(screen_width / 2 - 16 + x_offset - (i - 2) * 20);
+    dot_sprites[i].SetY(screen_height * 0.72);
+    dot_sprites[i].SetOpacity(dot_opacities[i]);
+  }
+}
+
+Plymouth.SetRefreshFunction(refresh_callback);
+
+# ── Progress Bar ──
+progress_bar_image = Image("progress-bar.png");
+progress_track_image = Image("progress-track.png");
+
+track_sprite = Sprite(progress_track_image);
+track_sprite.SetX(screen_width / 2 - 200);
+track_sprite.SetY(screen_height * 0.80);
+track_sprite.SetZ(50);
+
+bar_sprite = Sprite();
+bar_sprite.SetY(screen_height * 0.80);
+bar_sprite.SetZ(51);
+
+fun boot_progress_callback(duration, progress) {
+  bar_width = Math.Int(progress * 400);
+  if (bar_width > 1) {
+    bar_sprite.SetImage(progress_bar_image.Scale(bar_width, 8));
+    bar_sprite.SetX(screen_width / 2 - 200);
+  }
+}
+
+Plymouth.SetBootProgressFunction(boot_progress_callback);
+
+# ── Password Dialog ──
+entry_image = Image("entry.png");
+bullet_image = Image("bullet.png");
+lock_image = Image("lock.png");
+
+fun password_dialog_setup(prompt, num_bullets) {
+  dialog.lock_sprite = Sprite(lock_image);
+  dialog.lock_sprite.SetX(screen_width / 2 - 180);
+  dialog.lock_sprite.SetY(screen_height / 2 - 16);
+  dialog.lock_sprite.SetZ(200);
+
+  dialog.entry_sprite = Sprite(entry_image);
+  dialog.entry_sprite.SetX(screen_width / 2 - 150);
+  dialog.entry_sprite.SetY(screen_height / 2 - 20);
+  dialog.entry_sprite.SetZ(200);
+
+  dialog.bullet_sprites = [];
+  for (i = 0; i < num_bullets; i++) {
+    dialog.bullet_sprites[i] = Sprite(bullet_image);
+    dialog.bullet_sprites[i].SetX(screen_width / 2 - 130 + i * 20);
+    dialog.bullet_sprites[i].SetY(screen_height / 2 - 8);
+    dialog.bullet_sprites[i].SetZ(201);
+  }
+}
+
+fun password_dialog_clear(num_bullets) {
+  for (i = 0; i < num_bullets; i++) {
+    dialog.bullet_sprites[i] = NULL;
+  }
+  dialog.entry_sprite = NULL;
+  dialog.lock_sprite = NULL;
+}
+
+Plymouth.SetDisplayPasswordFunction(password_dialog_setup);
+
+# ── Message Display ──
+message_sprite = NULL;
+
+fun message_callback(text) {
+  # Plymouth script doesn't have great text rendering
+  # so we just hide any message sprites to keep it clean
+}
+
+Plymouth.SetMessageFunction(message_callback);

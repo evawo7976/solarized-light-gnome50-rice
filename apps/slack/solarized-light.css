@@ -1,0 +1,220 @@
+/* Solarized Light Slack Theme */
+
+body,
+.p-client_container,
+.p-client {
+  --sk_primary_background: #fdf6e3 !important;
+  --sk_secondary_background: #eee8d5 !important;
+  --sk_primary_foreground: #586e75 !important;
+  --sk_secondary_foreground: #657b83 !important;
+  --sk_highlight: #2aa198 !important;
+  --sk_highlight_hover: #268bd2 !important;
+  --sk_highlight_accent: #d1eae7 !important;
+}
+
+/* Main content area */
+body {
+  background-color: #fdf6e3 !important;
+  color: #586e75 !important;
+}
+
+/* Top nav / header bar */
+.p-top_nav,
+.p-top_nav__container,
+.p-ia4_top_nav,
+.p-ia4_top_nav__right,
+.p-ia4_top_nav__left,
+.p-ia4_top_nav__center {
+  background-color: #eee8d5 !important;
+  color: #586e75 !important;
+}
+
+/* Sidebar */
+.p-channel_sidebar,
+.p-channel_sidebar__static_list,
+.p-ia4_client .p-ia4_client__sidebar,
+.p-channel_sidebar--classic_nav {
+  background-color: #eee8d5 !important;
+  color: #586e75 !important;
+}
+
+/* Sidebar items */
+.p-channel_sidebar__channel,
+.p-channel_sidebar__link,
+.p-channel_sidebar__channel--selected,
+.c-link--button {
+  color: #586e75 !important;
+}
+
+.p-channel_sidebar__channel--selected,
+.p-channel_sidebar__link--selected {
+  background-color: #d1eae7 !important;
+  color: #2aa198 !important;
+}
+
+.p-channel_sidebar__channel:hover,
+.p-channel_sidebar__link:hover {
+  background-color: #fdf6e3 !important;
+}
+
+/* Sidebar section headers */
+.p-channel_sidebar__section_heading,
+.p-channel_sidebar__section_heading_label {
+  color: #93a1a1 !important;
+}
+
+/* Message area */
+.p-message_pane,
+.c-message_kit__background,
+.p-workspace__primary_view,
+.p-workspace__primary_view_body {
+  background-color: #fdf6e3 !important;
+}
+
+/* Messages */
+.c-message,
+.c-message__body,
+.c-message_kit__message {
+  color: #586e75 !important;
+}
+
+/* Message input / composer */
+.p-message_input_field,
+.ql-editor,
+.c-texty_input,
+.p-composer,
+.p-composer__body,
+.p-message_pane__compose {
+  background-color: #fdf6e3 !important;
+  color: #586e75 !important;
+  border-color: #d3cbbf !important;
+}
+
+/* Input placeholder */
+.ql-placeholder {
+  color: #93a1a1 !important;
+}
+
+/* Toolbar area */
+.p-view_header,
+.p-ia4_client__header {
+  background-color: #eee8d5 !important;
+  color: #586e75 !important;
+  border-bottom-color: #d3cbbf !important;
+}
+
+/* Buttons */
+.c-button-unstyled:hover,
+.c-button--primary {
+  background-color: #2aa198 !important;
+  color: #fdf6e3 !important;
+}
+
+/* Links */
+a, .c-link {
+  color: #268bd2 !important;
+}
+
+/* Code blocks */
+.c-mrkdwn__pre,
+.c-mrkdwn__code,
+code {
+  background-color: #eee8d5 !important;
+  color: #cb4b16 !important;
+  border-color: #d3cbbf !important;
+}
+
+/* Blockquotes */
+.c-mrkdwn__quote {
+  border-left-color: #2aa198 !important;
+}
+
+/* Reactions */
+.c-reaction_bar .c-reaction {
+  background-color: #eee8d5 !important;
+  border-color: #d3cbbf !important;
+}
+
+/* Unread badge */
+.p-channel_sidebar__badge {
+  background-color: #2aa198 !important;
+  color: #fdf6e3 !important;
+}
+
+/* Mentions badge */
+.p-channel_sidebar__badge--mention {
+  background-color: #dc322f !important;
+}
+
+/* Dividers */
+.c-message_list__day_divider__label,
+.c-message_list__day_divider__line {
+  color: #93a1a1 !important;
+  border-color: #eee8d5 !important;
+}
+
+/* Hover states on messages */
+.c-message_kit__hover {
+  background-color: #eee8d5 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdf6e3 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #93a1a1 !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #586e75 !important;
+}
+
+/* Popups / modals */
+.c-popover,
+.c-menu,
+.c-dialog,
+.ReactModal__Content {
+  background-color: #fdf6e3 !important;
+  color: #586e75 !important;
+  border-color: #d3cbbf !important;
+}
+
+.c-menu__item:hover,
+.c-menu__item--highlighted {
+  background-color: #eee8d5 !important;
+}
+
+/* Search */
+.p-search_filter,
+.c-search__input_and_close,
+.c-search_input {
+  background-color: #fdf6e3 !important;
+  color: #586e75 !important;
+  border-color: #d3cbbf !important;
+}
+
+/* Thread panel */
+.p-flexpane,
+.p-flexpane_header,
+.p-threads_flexpane {
+  background-color: #fdf6e3 !important;
+  border-left-color: #eee8d5 !important;
+}
+
+/* Timestamps */
+.c-timestamp,
+.c-message__sender {
+  color: #93a1a1 !important;
+}
+
+.c-message__sender_link {
+  color: #073642 !important;
+}

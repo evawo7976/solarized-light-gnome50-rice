@@ -1,0 +1,126 @@
+/* Solarized Light Theme for Zen Browser */
+/* Works with Zen's light-dark() CSS system by forcing light mode */
+/* and overriding Zen's branding/color variables */
+
+:root,
+:host(:is(.anonymous-content-host, notification-message)) {
+  /* Force Zen's primary color to Solarized Cyan */
+  --zen-primary-color: #2aa198 !important;
+
+  /* Override Zen's branding colors for Solarized Light */
+  --zen-branding-paper: #fdf6e3 !important;
+  --zen-branding-dark: #073642 !important;
+
+  /* Force light backgrounds */
+  --zen-branding-bg: #fdf6e3 !important;
+  --zen-branding-bg-reverse: #073642 !important;
+
+  /* Override Zen's computed color variables */
+  --zen-colors-primary: #2aa198 !important;
+  --zen-colors-secondary: #d1eae7 !important;
+  --zen-colors-tertiary: #fdf6e3 !important;
+  --zen-colors-hover-bg: #268bd2 !important;
+  --zen-colors-primary-foreground: #073642 !important;
+  --zen-colors-border: #d3cbbf !important;
+  --zen-colors-border-contrast: rgba(181, 181, 181, 0.11) !important;
+  --zen-colors-input-bg: #fdf6e3 !important;
+
+  /* Zen dialog and URL bar */
+  --zen-dialog-background: #fdf6e3 !important;
+  --zen-urlbar-background: #eee8d5 !important;
+
+  /* Firefox/Zen toolbar variables */
+  --toolbar-bgcolor: #eee8d5 !important;
+  --toolbar-color: #586e75 !important;
+  --toolbar-field-background-color: #fdf6e3 !important;
+  --toolbar-field-color: #586e75 !important;
+  --toolbar-field-focus-background-color: #fdf6e3 !important;
+  --toolbar-field-focus-color: #073642 !important;
+  --toolbar-field-border-color: #d3cbbf !important;
+
+  /* Sidebar */
+  --lwt-sidebar-background-color: #eee8d5 !important;
+  --lwt-sidebar-text-color: #586e75 !important;
+  --sidebar-background-color: #eee8d5 !important;
+  --sidebar-text-color: #586e75 !important;
+
+  /* Tab colors */
+  --tab-selected-bgcolor: #fdf6e3 !important;
+  --tab-selected-textcolor: #586e75 !important;
+  --lwt-tab-text: #657b83 !important;
+
+  /* URL bar */
+  --urlbar-box-bgcolor: #fdf6e3 !important;
+  --urlbar-box-hover-bgcolor: #eee8d5 !important;
+
+  /* Focus/accent */
+  --focus-outline-color: #2aa198 !important;
+
+  /* Color scheme override */
+  color-scheme: light !important;
+}
+
+/* Force light color scheme globally */
+:root {
+  color-scheme: light !important;
+}
+
+/* Toolbar area */
+#navigator-toolbox {
+  background-color: #eee8d5 !important;
+  color: #586e75 !important;
+}
+
+/* URL bar */
+#urlbar-background {
+  background-color: #fdf6e3 !important;
+}
+
+#urlbar[focused] #urlbar-background {
+  border-color: #2aa198 !important;
+  box-shadow: 0 0 0 2px rgba(42, 161, 152, 0.2) !important;
+}
+
+/* Sidebar panels */
+#zen-sidebar-web-panel,
+#sidebar-box {
+  background-color: #eee8d5 !important;
+  color: #586e75 !important;
+}
+
+/* Tabs */
+.tabbrowser-tab {
+  color: #657b83 !important;
+}
+
+.tabbrowser-tab[selected] {
+  color: #586e75 !important;
+}
+
+/* Popups and menus */
+.panel-arrowcontent,
+menupopup,
+panel {
+  background-color: #fdf6e3 !important;
+  color: #586e75 !important;
+}
+
+menupopup menuitem:hover,
+menupopup menu:hover {
+  background-color: #eee8d5 !important;
+  color: #073642 !important;
+}
+
+/* Findbar */
+findbar {
+  background-color: #eee8d5 !important;
+  color: #586e75 !important;
+}
+
+/* New tab page override */
+@-moz-document url("about:newtab"), url("about:home") {
+  body {
+    background-color: #fdf6e3 !important;
+    color: #586e75 !important;
+  }
+}
